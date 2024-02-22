@@ -61,14 +61,14 @@ const SearchContainer = () => {
           <div className="col-sm-4" key={photo.id}>
             <a href={photo.urls.full} target="_blank">
               <Image
-                blurDataURL="/blurimg.webp"
-                placeholder="blur"
+                blurDataURL="/blurimg.png"
                 src={photo.urls.full}
                 alt={photo.alt_description}
                 className="imgfix"
                 width={photo.width}
                 height={photo.height}
-                loading="lazy"
+                placeholder="blur"
+                priority
               />
             </a>
           </div>
