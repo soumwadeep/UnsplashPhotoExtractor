@@ -24,7 +24,7 @@ const SearchContainer = () => {
     } catch (err) {
       console.error(err);
     } finally {
-      setQuery("");
+      // setQuery("");
       setIsSearching(false);
     }
   };
