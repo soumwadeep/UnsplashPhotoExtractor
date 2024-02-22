@@ -31,7 +31,7 @@ const SearchContainer = () => {
 
   return (
     <main className="search-result">
-      <form className="row g-3" onSubmit={handleSearch}>
+      <form className="row g-3 sticky-top" onSubmit={handleSearch}>
         <div className="col-md-11">
           <label htmlFor="keyword" className="visually-hidden">
             Keyword
@@ -51,7 +51,7 @@ const SearchContainer = () => {
             className="btn btn-success mb-3"
             disabled={isSearching}
           >
-            {isSearching ? "Loading Images..." : "Search"}
+            {isSearching ? "Loading..." : "Search"}
           </button>
         </div>
       </form>
