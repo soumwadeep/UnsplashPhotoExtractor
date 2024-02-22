@@ -6,3 +6,12 @@ body {
   );
   background-attachment: fixed;
 }
+.search-result {
+  min-height: 80vh;
+}
+.imgfix {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
