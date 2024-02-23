@@ -30,6 +30,20 @@ const YoutubeContainer = () => {
       setResult(data.items);
       // console.log(data.items[0].id);
       setCaptionId(data.items[0].id);
+      // Initiate Auth
+      const authRes = await fetch(
+        `https://accounts.google.com/o/oauth2/v2/auth?
+        scope=https://www.googleapis.com/auth/youtube.force-ssl&
+        include_granted_scopes=true&
+        redirect_uri=https://searchphoto.soumwadeepguha.com/YoutubeTranscriptor&
+        response_type=token&
+        client_id=${process.env.NEXT_PUBLIC_YOUTUBE_CLIENT_ID}`
+      );
+      if (!res.ok) {
+        throw new Error("Failed To Fetch Data");
+      }
+      const authData = await authRes.json();
+      console.log("Auth:",authData);
       // Now Initiate Download
       const downloadData = await fetch(
         `https://youtube.googleapis.com/youtube/v3/captions/${data.items[0].id}?key=${process.env.NEXT_PUBLIC_YOUTUBE_CAPTION_API_KEY}`,
