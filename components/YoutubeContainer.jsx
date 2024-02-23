@@ -35,7 +35,7 @@ const YoutubeContainer = () => {
         `https://youtube.googleapis.com/youtube/v3/captions/${data.items[0].id}?key=${process.env.NEXT_PUBLIC_YOUTUBE_CAPTION_API_KEY}`,
         {
           headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY}`,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_YOUTUBE_CLIENT_SECRET_KEY}`,
             Accept: "application/json",
           },
         }
