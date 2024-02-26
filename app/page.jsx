@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <div className="text-center">
       <h1>Welcome To Unsplash Photo Extractor</h1>
-      <Link href="/YoutubeTranscriptor" className="btn btn-info">
+      <a href="https://yttranscriptor.soumwadeepguha.com/" target="_blank" className="btn btn-info">
         Youtube Transcript Extractor(New*)
-      </Link>
+      </a>
       <p className="mt-4">
         Search Your Favourite Photos Just By Typing About It In The Below Search
         Field
